@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div id="page-main">
+	<div id="tweet-alf"><img src="../static/images/alf-background.jpg"></div>
+	<div id="tweet-wrapper">
+		<form id="tweet-form" action="post_submit" method="POST">
+			<label for="tweet-input">"Say something for me!"</label>
+			<textarea id="tweet-input" maxlength="255" name="post_content"></textarea>
+			<div id="tweet-btn-wrapper">
+				<button type="submit" id="tweet-button">Submit</button>
+			</div>
+		</form>
+	</div>
+
+	<div id="feed">
+		{% for post in posts: %}
+		<div class="feed-post">
+			<div class="post-user">
+				<img src="../static/profile/{{post[3]}}">
+				<div class="username">{{post[2]}}</div>
+			</div>
+			<div class="post-post">
+				<div class="post-content">
+					<div class="text">{{post[4]}}<div class="timestamp">{{post[6]}}</div></div>
+				</div>
+				<div class="post-voting">
+					<div class="board" pid="{{post[0]}}" uid="{{post[1]}}">
+						<span class="vote-up">Yay</span>
+						<span class="count">{{post[5]}}</span>
+						<span class="vote-down">Nah</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+
+</div>
+<div id="main-background">
+</div>
+{% endblock %}

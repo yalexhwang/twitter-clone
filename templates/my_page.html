@@ -1,0 +1,59 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div id="page-myPage">
+	<div id="myInfo">
+		<div id="photo-wrapper">
+			<img src="../static/profile/{{user_info[5]}}">
+		</div>
+		<div id="info-wrapper">
+			<div id="user-name">
+				{{user_info[2]}}<span>{{user_info[1]}}</span>
+			</div>
+			<table id="user-stat">
+				<tr>
+					<td>Tweets</td><td class="td-num">{{user_stat[0]}}</td>
+				</tr>
+				<tr>
+					<td id="showVoted">Votes</td><td class="td-num">{{user_info[6]}}</td>
+				</tr>
+				<tr>
+					<td>Following</td><td class="td-num">{{user_stat[1]}}</td>
+				</tr>
+				<tr>
+					<td>Followers</td><td class="td-num">{{user_stat[2]}}</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="myPage-tab">
+		<div id="tweets">
+			{% for post in user_posts: %}
+			<div class="myPost">
+				{{post[3]}}
+				<div class="post-info">
+					<span class="post-time">{{post[4]}} <img src="../static/images/remove-icon.png" width="13" pid="{{post[0]}}" class="removePost"></span>
+					<span class="post-votes">{{post[5]}}</span>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<div id="followers">
+			{% for user in followers: %}
+			<div class="myFollowers" uid="{{user[0]}}">
+				<div class="follower-photo">
+					<img src="../static/profile/{{user[3]}}">
+				</div>
+				<div class="follower-info">
+					<div class="follower-username">
+						{{user[2]}}<span>{{user[1]}}</span>
+					</div>{{user[4]}}
+				</div>
+			</div>
+			{% endfor %}
+
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}

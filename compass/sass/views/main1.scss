@@ -1,0 +1,55 @@
+#page-main {
+	display: flex;
+	flex-flow: row wrap;
+}
+#tweet-alf {
+	flex: 1 480px;
+	text-align: center;
+	img {
+		width: 470px;
+	}
+}
+
+#tweet-wrapper {
+	flex: 0 480px;
+	background-color: $alf-sub-brown;
+	padding: 10px 0px;
+	#tweet-form {
+		display: flex;
+		flex-flow: row wrap;
+		label {
+			flex: 0 90%;
+			margin: auto;
+			font-family: 'Short Stack', sans-serif;
+			padding: 5px 0px;
+		}
+		#tweet-input {
+			flex: 0 85%;
+			resize: none;
+			margin: auto;
+			height: 80px;
+			font-size: 14px;
+			padding: 5px 8px;
+		}
+		#tweet-btn-wrapper {
+			flex: 0 90%;
+			margin: 10px auto;
+			#tweet-button {
+				border: none;
+				font-size: 14px;
+				color: white;
+				background-color: $alf-red;
+				padding: 5px 10px;
+				border-radius: 5px;
+			}
+		}
+	}
+	
+}
+
+// @include breakpoint(768) {
+// 		width: 95%;
+// 	}
+// 	@include breakpoint(992) {
+// 		width: 70%;
+// 	}

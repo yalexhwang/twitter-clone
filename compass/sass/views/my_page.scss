@@ -1,0 +1,152 @@
+#page-myPage {
+	background-color: $alf-blue;
+	min-height: 90vh;
+	height: 100%;
+	padding-bottom: 40px;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+#myInfo {
+	display: flex;
+	flex-flow: row nowrap;
+	padding: 20px;
+	flex: 0 432px;
+	justify-content: center;
+	@include breakpoint(480) {
+		flex: 1 90%;
+	}
+	@include breakpoint(768) {
+		flex: 0 755px;
+	}
+	@include breakpoint(992) {
+
+	}
+	#photo-wrapper {
+		flex: 0 210px;
+		@include breakpoint(480) {
+			flex: 0 210px;
+		}
+		img {
+			width: 200px;
+			border: 10px solid $neon-green;
+			border-radius: 10px;
+		}
+	}
+	#info-wrapper {
+		flex: 0 210px;
+		padding: 0px 15px;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		align-items: center;
+		font-family: $soft-font;
+		#user-name {
+			flex: 0 100%;
+			font-family: $alf-font;
+			font-size: 24px;
+			color: $alf-red;
+			span {
+				font-size: 20px;
+				padding-left: 8px;
+				color: $tone-red;
+				font-family: $message-font;
+			}
+		}
+		#user-stat {
+			flex: 0 100%;
+			td {
+				padding: 0px 5px;
+				color: $alf-brown;
+			}
+			.td-num {
+				width: 40px;
+				text-align: center;
+				border-radius: 8px;
+				font-family: $message-font;
+				background-color: white;
+				color: $alf-red;
+			}
+		}
+	}
+}
+
+#myPage-tab {
+	display: flex;
+	flex-flow: row wrap;
+	@include breakpoint(480) {
+		flex: 1 90%;
+	}
+	@include breakpoint(768) {
+
+	}
+	@include breakpoint(992) {
+
+	}
+}
+
+#tweets {
+	background-color: white;
+	margin-left: 20px;
+	flex: 0 432px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	@include breakpoint(480) {
+		flex: 0 90%;
+	}
+	@include breakpoint(768) {
+		flex: 0 755px;
+	}
+	.myPost {
+		flex: 0 432px;
+		margin: auto;
+		border-top: 3px dotted $neon-green;
+		border-bottom: 3px dotted $alf-brown;
+		padding: 13px 20px;
+		color: #1e1e1e;
+		font-family: 'Short Stack', sans-serif;
+		.post-info {
+			width: 95%;
+			margin-top: 10px;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			color: #474747;
+			font-size: 12px;
+			font-family: $message-font;
+			.post-time {
+				vertical-align: bottom;
+				img {
+					padding-left: 3px;
+				}
+			}
+			.post-votes {
+				font-family: $message-font;
+				font-size: 16px;
+				padding: 5px 10px;
+				color: $alf-red;
+				border: 1px solid #474747;
+				border-radius: 3px;
+			}
+		}
+	}
+}
+
+#followers {
+	background-color: white;
+	margin-left: 20px;
+	flex: 0 432px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	@include breakpoint(480) {
+		flex: 1 90%;
+	}
+	@include breakpoint(768) {
+		flex: 0 755px;
+	}
+	.myFollowers {
+		
+	}
+}

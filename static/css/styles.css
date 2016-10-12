@@ -1,0 +1,616 @@
+/* line 1, ../../compass/sass/views/main.scss */
+#page-main {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #B98D51;
+}
+
+/* line 6, ../../compass/sass/views/main.scss */
+#tweet-alf {
+  flex: 1 100%;
+  text-align: center;
+  background-color: white;
+  border-bottom: 6px solid #b16e0a;
+  height: 265px;
+}
+/* line 12, ../../compass/sass/views/main.scss */
+#tweet-alf img {
+  width: 485px;
+  height: 265px;
+}
+
+/* line 18, ../../compass/sass/views/main.scss */
+#tweet-wrapper {
+  flex: 1 100%;
+  background-color: #B98D51;
+  padding: 10px 0px;
+}
+/* line 22, ../../compass/sass/views/main.scss */
+#tweet-wrapper #tweet-form {
+  flex: 1 480px;
+  display: flex;
+  flex-flow: row wrap;
+}
+@media (min-width: 768px) {
+  /* line 22, ../../compass/sass/views/main.scss */
+  #tweet-wrapper #tweet-form {
+    width: 740px;
+    margin: auto;
+  }
+}
+/* line 33, ../../compass/sass/views/main.scss */
+#tweet-wrapper #tweet-form label {
+  flex: 0 90%;
+  margin: auto;
+  font-family: 'Short Stack', sans-serif;
+  padding: 5px 0px;
+}
+/* line 39, ../../compass/sass/views/main.scss */
+#tweet-wrapper #tweet-form #tweet-input {
+  flex: 0 85%;
+  resize: none;
+  margin: auto;
+  height: 80px;
+  font-size: 14px;
+  padding: 5px 8px;
+}
+/* line 47, ../../compass/sass/views/main.scss */
+#tweet-wrapper #tweet-form #tweet-btn-wrapper {
+  flex: 0 90%;
+  margin: 10px auto;
+}
+/* line 50, ../../compass/sass/views/main.scss */
+#tweet-wrapper #tweet-form #tweet-btn-wrapper #tweet-button {
+  border: none;
+  font-size: 14px;
+  color: white;
+  background-color: #E83130;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* line 62, ../../compass/sass/views/main.scss */
+#feed {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  padding: 20px 0px;
+  display: flex;
+  flex-flow: row wrap;
+}
+@media (min-width: 768px) {
+  /* line 62, ../../compass/sass/views/main.scss */
+  #feed {
+    width: 95%;
+  }
+}
+@media (min-width: 992px) {
+  /* line 62, ../../compass/sass/views/main.scss */
+  #feed {
+    width: 70%;
+  }
+}
+
+/* line 77, ../../compass/sass/views/main.scss */
+.feed-post {
+  background-color: #0de2cb;
+  padding: 5px 10px;
+  display: flex;
+  flex: 0 90%;
+  margin: 10px auto;
+}
+@media (min-width: 768px) {
+  /* line 77, ../../compass/sass/views/main.scss */
+  .feed-post {
+    flex: 0 90%;
+  }
+}
+@media (min-width: 992px) {
+  /* line 77, ../../compass/sass/views/main.scss */
+  .feed-post {
+    flex: 0 45%;
+  }
+}
+/* line 93, ../../compass/sass/views/main.scss */
+.feed-post .post-user {
+  flex: 0 25%;
+  padding-top: 5px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+/* line 107, ../../compass/sass/views/main.scss */
+.feed-post .post-user img {
+  width: 90px;
+  height: 100px;
+  box-sizing: border-box;
+  border: 3px solid #ee4035;
+  border-radius: 8px;
+}
+/* line 119, ../../compass/sass/views/main.scss */
+.feed-post .post-user .username {
+  padding: 2px 10px;
+  margin-top: 3px;
+  border-radius: 5px;
+  color: white;
+  background-color: #ee4035;
+  font-size: 12px;
+}
+/* line 129, ../../compass/sass/views/main.scss */
+.feed-post .post-post {
+  flex: 2 85%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+/* line 133, ../../compass/sass/views/main.scss */
+.feed-post .post-post .post-content {
+  flex: 1 80%;
+  height: 100%;
+  padding: 5px;
+  font-size: 14px;
+  color: black;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+/* line 142, ../../compass/sass/views/main.scss */
+.feed-post .post-post .post-content .text {
+  min-height: 110px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 8px 10px;
+}
+/* line 148, ../../compass/sass/views/main.scss */
+.feed-post .post-post .post-content .timestamp {
+  display: block;
+  font-size: 10px;
+  font-family: 'Ubuntu', sans-serif;
+  color: grey;
+  padding: 5px 3px 0px 0px;
+}
+/* line 156, ../../compass/sass/views/main.scss */
+.feed-post .post-post .post-voting {
+  flex: 1 20%;
+  height: 80%;
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  font-family: 'Short Stack', sans-serif;
+}
+/* line 164, ../../compass/sass/views/main.scss */
+.feed-post .post-post .post-voting .board {
+  flex: 1 100%;
+  margin: 10px 5px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  text-align: center;
+}
+/* line 171, ../../compass/sass/views/main.scss */
+.feed-post .post-post .post-voting .board .count {
+  background-color: white;
+  width: 70%;
+  margin: auto;
+  border: 3px solid #ee4035;
+  border-radius: 3px;
+  padding: 1px 0px;
+  font-size: 20px;
+}
+/* line 180, ../../compass/sass/views/main.scss */
+.feed-post .post-post .post-voting .board .vote-up, .feed-post .post-post .post-voting .board .vote-down {
+  width: 70%;
+  margin: auto;
+  background-color: #ee4035;
+  font-size: 13px;
+  line-height: 16px;
+  color: white;
+  padding: 3px;
+  border-radius: 10px;
+}
+
+/* line 1, ../../compass/sass/views/login.scss */
+#page-login {
+  padding-top: 20px;
+}
+
+/* line 5, ../../compass/sass/views/login.scss */
+#login-wrapper {
+  display: block;
+  width: 450px;
+  margin: auto;
+  background-color: #00FF83;
+  font-fsamily: "Nunito", sans-serif;
+  border-radius: 5px;
+}
+/* line 12, ../../compass/sass/views/login.scss */
+#login-wrapper h3 {
+  padding-left: 15px;
+  margin: 0px;
+  padding: 10px 0px 0px 15px;
+  color: #b16e0a;
+}
+
+/* line 21, ../../compass/sass/views/login.scss */
+#login-message {
+  display: block;
+  width: 400px;
+  margin: 20px auto;
+  padding: 10px 15px;
+  border: 3px solid #FC913A;
+  border-radius: 3px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  color: #b16e0a;
+}
+
+/* line 1, ../../compass/sass/views/register.scss */
+#page-register {
+  padding-top: 20px;
+}
+
+/* line 5, ../../compass/sass/views/register.scss */
+#register-wrapper {
+  width: 450px;
+  margin: auto;
+  background-color: #00FF83;
+  font-family: "Nunito", sans-serif;
+  border-radius: 5px;
+}
+/* line 11, ../../compass/sass/views/register.scss */
+#register-wrapper h3 {
+  padding-left: 15px;
+  margin: 0px;
+  padding: 10px 0px 0px 15px;
+  color: #b16e0a;
+}
+
+/* line 19, ../../compass/sass/views/register.scss */
+.form {
+  font-size: 14px;
+  padding: 20px 15px;
+}
+/* line 22, ../../compass/sass/views/register.scss */
+.form .form-group {
+  width: 90%;
+}
+/* line 24, ../../compass/sass/views/register.scss */
+.form .form-group .input-area {
+  padding: 2px 0px 5px 0px;
+}
+/* line 26, ../../compass/sass/views/register.scss */
+.form .form-group .input-area input {
+  width: 80%;
+  height: 18px;
+  font-size: 14px;
+}
+/* line 34, ../../compass/sass/views/register.scss */
+.form .button-wrapper {
+  margin-top: 20px;
+}
+/* line 36, ../../compass/sass/views/register.scss */
+.form .button-wrapper button {
+  border: none;
+  border-radius: 5px;
+  background-color: #ee4035;
+  color: white;
+  font-size: 14px;
+  padding: 5px 10px;
+}
+
+/* line 47, ../../compass/sass/views/register.scss */
+#register-message {
+  width: 400px;
+  margin: 20px auto;
+  padding: 10px 15px;
+  border: 3px solid #FC913A;
+  border-radius: 3px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  color: #b16e0a;
+}
+
+/* line 1, ../../compass/sass/views/my_page.scss */
+#page-myPage {
+  background-color: #0de2cb;
+  min-height: 90vh;
+  height: 100%;
+  padding-bottom: 40px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/* line 10, ../../compass/sass/views/my_page.scss */
+#myInfo {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 20px;
+  flex: 0 432px;
+  justify-content: center;
+}
+@media (min-width: 480px) {
+  /* line 10, ../../compass/sass/views/my_page.scss */
+  #myInfo {
+    flex: 1 90%;
+  }
+}
+@media (min-width: 768px) {
+  /* line 10, ../../compass/sass/views/my_page.scss */
+  #myInfo {
+    flex: 0 755px;
+  }
+}
+/* line 25, ../../compass/sass/views/my_page.scss */
+#myInfo #photo-wrapper {
+  flex: 0 210px;
+}
+@media (min-width: 480px) {
+  /* line 25, ../../compass/sass/views/my_page.scss */
+  #myInfo #photo-wrapper {
+    flex: 0 210px;
+  }
+}
+/* line 30, ../../compass/sass/views/my_page.scss */
+#myInfo #photo-wrapper img {
+  width: 200px;
+  border: 10px solid #00FF83;
+  border-radius: 10px;
+}
+/* line 36, ../../compass/sass/views/my_page.scss */
+#myInfo #info-wrapper {
+  flex: 0 210px;
+  padding: 0px 15px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Nunito", sans-serif;
+}
+/* line 44, ../../compass/sass/views/my_page.scss */
+#myInfo #info-wrapper #user-name {
+  flex: 0 100%;
+  font-family: "Bungee Inline", sans-serif;
+  font-size: 24px;
+  color: #E83130;
+}
+/* line 49, ../../compass/sass/views/my_page.scss */
+#myInfo #info-wrapper #user-name span {
+  font-size: 20px;
+  padding-left: 8px;
+  color: #ee4035;
+  font-family: "Open Sans", sans-serif;
+}
+/* line 56, ../../compass/sass/views/my_page.scss */
+#myInfo #info-wrapper #user-stat {
+  flex: 0 100%;
+}
+/* line 58, ../../compass/sass/views/my_page.scss */
+#myInfo #info-wrapper #user-stat td {
+  padding: 0px 5px;
+  color: #b16e0a;
+}
+/* line 62, ../../compass/sass/views/my_page.scss */
+#myInfo #info-wrapper #user-stat .td-num {
+  width: 40px;
+  text-align: center;
+  border-radius: 8px;
+  font-family: "Open Sans", sans-serif;
+  background-color: white;
+  color: #E83130;
+}
+
+/* line 74, ../../compass/sass/views/my_page.scss */
+#myPage-tab {
+  display: flex;
+  flex-flow: row wrap;
+}
+@media (min-width: 480px) {
+  /* line 74, ../../compass/sass/views/my_page.scss */
+  #myPage-tab {
+    flex: 1 90%;
+  }
+}
+
+/* line 88, ../../compass/sass/views/my_page.scss */
+#tweets {
+  background-color: white;
+  margin-left: 20px;
+  flex: 0 432px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+@media (min-width: 480px) {
+  /* line 88, ../../compass/sass/views/my_page.scss */
+  #tweets {
+    flex: 0 90%;
+  }
+}
+@media (min-width: 768px) {
+  /* line 88, ../../compass/sass/views/my_page.scss */
+  #tweets {
+    flex: 0 755px;
+  }
+}
+/* line 101, ../../compass/sass/views/my_page.scss */
+#tweets .myPost {
+  flex: 0 432px;
+  margin: auto;
+  border-top: 3px dotted #00FF83;
+  border-bottom: 3px dotted #b16e0a;
+  padding: 13px 20px;
+  color: #1e1e1e;
+  font-family: 'Short Stack', sans-serif;
+}
+/* line 109, ../../compass/sass/views/my_page.scss */
+#tweets .myPost .post-info {
+  width: 95%;
+  margin-top: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  color: #474747;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+}
+/* line 118, ../../compass/sass/views/my_page.scss */
+#tweets .myPost .post-info .post-time {
+  vertical-align: bottom;
+}
+/* line 120, ../../compass/sass/views/my_page.scss */
+#tweets .myPost .post-info .post-time img {
+  padding-left: 3px;
+}
+/* line 124, ../../compass/sass/views/my_page.scss */
+#tweets .myPost .post-info .post-votes {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  padding: 5px 10px;
+  color: #E83130;
+  border: 1px solid #474747;
+  border-radius: 3px;
+}
+
+/* line 136, ../../compass/sass/views/my_page.scss */
+#followers {
+  background-color: white;
+  margin-left: 20px;
+  flex: 0 432px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+@media (min-width: 480px) {
+  /* line 136, ../../compass/sass/views/my_page.scss */
+  #followers {
+    flex: 1 90%;
+  }
+}
+@media (min-width: 768px) {
+  /* line 136, ../../compass/sass/views/my_page.scss */
+  #followers {
+    flex: 0 755px;
+  }
+}
+
+/* line 28, ../../compass/sass/styles.scss */
+html {
+  height: 100%;
+  min-width: 480px;
+}
+
+/* line 33, ../../compass/sass/styles.scss */
+body {
+  height: 100%;
+  margin: auto;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+/* line 41, ../../compass/sass/styles.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 45, ../../compass/sass/styles.scss */
+nav {
+  flex: 1 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 10px 0px;
+  color: #E83130;
+}
+/* line 52, ../../compass/sass/styles.scss */
+nav #nav-home {
+  flex: 1 0 50%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  padding-left: 15px;
+}
+/* line 63, ../../compass/sass/styles.scss */
+nav #nav-home #title a, nav #nav-home #title a:link, nav #nav-home #title a:visited, nav #nav-home #title a:active {
+  font-size: 26px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #E83130;
+}
+/* line 68, ../../compass/sass/styles.scss */
+nav #nav-home #title a #Alf, nav #nav-home #title a:link #Alf, nav #nav-home #title a:visited #Alf, nav #nav-home #title a:active #Alf {
+  color: #E83130;
+  font-size: 32px;
+  font-family: "Bungee Inline", sans-serif;
+}
+/* line 77, ../../compass/sass/styles.scss */
+nav #nav-menu {
+  flex: 1 0 45%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  padding-right: 35px;
+  font-family: 'Catamaran', sans-serif;
+}
+/* line 84, ../../compass/sass/styles.scss */
+nav #nav-menu .menu {
+  margin: 10px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+/* line 89, ../../compass/sass/styles.scss */
+nav #nav-menu .menu a {
+  color: #b16e0a;
+}
+/* line 93, ../../compass/sass/styles.scss */
+nav #nav-menu .menu:hover {
+  transform: scale(1.1, 1.1);
+}
+
+/* line 100, ../../compass/sass/styles.scss */
+#index {
+  width: 100%;
+  height: 95vh;
+}
+
+/* line 105, ../../compass/sass/styles.scss */
+#carousel-wrapper {
+  width: 100%;
+}
+
+/* line 111, ../../compass/sass/styles.scss */
+#carousel .carousel-item img {
+  width: 100%;
+}
+
+/* line 117, ../../compass/sass/styles.scss */
+#main {
+  background-image: url("../images/alf-background.jpg") no-repeat;
+  background-size: contain;
+  height: 100%;
+}
+/* line 121, ../../compass/sass/styles.scss */
+#main #intro {
+  width: 90%;
+  margin: auto;
+  color: #E83130;
+  font-family: "Nunito", sans-serif;
+  text-align: justify;
+}
+/* line 132, ../../compass/sass/styles.scss */
+#main #intro h1 {
+  text-align: center;
+}
+/* line 134, ../../compass/sass/styles.scss */
+#main #intro h1 span {
+  display: block;
+  font-family: "Bungee Inline", sans-serif;
+  font-size: 36px;
+}
+/* line 141, ../../compass/sass/styles.scss */
+#main #intro p {
+  color: #404040;
+  font-weight: lighter;
+}

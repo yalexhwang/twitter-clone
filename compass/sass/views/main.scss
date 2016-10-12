@@ -1,0 +1,202 @@
+#page-main {
+	display: flex;
+	flex-flow: row wrap;
+	background-color: $alf-sub-brown;
+}
+#tweet-alf {
+	flex: 1 100%;
+	text-align: center;
+	background-color: white;
+	border-bottom: 6px solid $alf-brown;
+	height: 265px;
+	img {
+		width: 485px;	
+		height: 265px;
+	}
+}
+
+#tweet-wrapper {
+	flex: 1 100%;
+	background-color: $alf-sub-brown;
+	padding: 10px 0px;
+	#tweet-form {
+		flex: 1 480px;
+		display: flex;
+		flex-flow: row wrap;
+		@include breakpoint(768) {
+			width: 740px;
+			margin: auto;
+		}
+		@include breakpoint(992) {
+
+		}
+		label {
+			flex: 0 90%;
+			margin: auto;
+			font-family: 'Short Stack', sans-serif;
+			padding: 5px 0px;
+		}
+		#tweet-input {
+			flex: 0 85%;
+			resize: none;
+			margin: auto;
+			height: 80px;
+			font-size: 14px;
+			padding: 5px 8px;
+		}
+		#tweet-btn-wrapper {
+			flex: 0 90%;
+			margin: 10px auto;
+			#tweet-button {
+				border: none;
+				font-size: 14px;
+				color: white;
+				background-color: $alf-red;
+				padding: 5px 10px;
+				border-radius: 5px;
+			}
+		}
+	}
+}
+
+#feed {
+	width: 90%;
+	height: 100%;
+	margin: auto;
+	padding: 20px 0px;
+	display: flex;
+	flex-flow: row wrap;
+	@include breakpoint(768) {
+		width: 95%;
+	}
+	@include breakpoint(992) {
+		width: 70%;
+	}
+}
+
+.feed-post {
+	// background-image: url('../images/p2.jpg');
+	// background-size: cover;
+	background-color: $alf-blue;
+	// border: 1px solid $tone-red;
+	padding: 5px 10px;
+	display: flex;
+	flex: 0 90%;
+	margin: 10px auto;
+	@include breakpoint(768) {
+		flex: 0 90%;
+	}
+	@include breakpoint(992) {
+		flex: 0 45%;
+	}
+
+	.post-user {
+		flex: 0 25%;
+		padding-top: 5px;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: space-around;
+		align-items: center;
+		@include breakpoint(768) {
+
+		}
+		@include breakpoint(992) {
+
+		}
+		
+		img {
+			width: 90px;
+			height: 100px;
+			box-sizing: border-box;
+			border: 3px solid $tone-red;
+			border-radius: 8px;
+			@include breakpoint(768) {
+			}
+			@include breakpoint(992) {
+
+			}
+		}
+		.username {
+			padding: 2px 10px;
+			margin-top: 3px;
+			border-radius: 5px;
+			color: white;
+			background-color: $tone-red;
+			font-size: 12px;
+		}
+	}
+
+	.post-post {
+		flex: 2 85%;
+		display: flex;
+		flex-flow: row nowrap;
+		.post-content {
+			flex: 1 80%;
+			height: 100%;
+			padding: 5px;
+			font-size: 14px;
+			color: black;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: space-between;
+			.text {
+				min-height: 110px;
+				background-color: white;
+				border-radius: 5px;
+				padding: 8px 10px;
+			}
+			.timestamp {
+				display: block;
+				font-size: 10px;
+				font-family: 'Ubuntu', sans-serif;
+				color: grey;
+				padding: 5px 3px 0px 0px;
+			}
+		}
+		.post-voting {
+			flex: 1 20%;
+			height: 80%;
+			margin: auto;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: center;
+			font-family: 'Short Stack', sans-serif;
+			.board {
+				flex: 1 100%;
+				margin: 10px 5px;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: space-between;
+				text-align: center;
+				.count {
+					background-color: white;
+					width: 70%;
+					margin: auto;
+					border: 3px solid $tone-red;
+					border-radius: 3px;
+					padding: 1px 0px;
+					font-size: 20px;
+				}
+				.vote-up, .vote-down {
+					width: 70%;
+					margin: auto;
+					background-color: $tone-red;
+					font-size: 13px;
+					line-height: 16px;
+					color: white;
+					padding: 3px;
+					border-radius: 10px;
+				}
+			}
+		}
+	}
+}
+
+
+
+// @include breakpoint(768) {
+// 		width: 95%;
+// 	}
+// 	@include breakpoint(992) {
+// 		width: 70%;
+// 	}

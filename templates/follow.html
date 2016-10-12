@@ -1,0 +1,64 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="container-fluid" id="container-main">
+	<div class="row">
+		<div class="col-sm-4">
+			<div id="user-wrapper">
+				<div id="user-photo">
+					<img src="static/profile/{{user_info[5]}}">
+				</div>
+				<div id="user-info" uid="{{user_info[0]}}">
+					<h3>{{user_info[2]}}<small> {{user_info[1]}}</small></h3>
+					<div class="stat-wrapper"><span id="following_num">{{user_info[4]}}</span> following </div>
+					<div class="stat-wrapper"><span id="followers_num">{{user_info[4]}}</span> followers </div>
+					<div class="stat-wrapper"><span id="votes_num">{{user_info[6]}}</span> Votes </div>
+				</div>
+			</div>
+			<div id="post-form-wrapper">
+				<form action="post_submit" method="POST">
+					<div class="form-group">
+						<textarea row="3" class="form-control" name="post_content" maxlength="255"></textarea>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-default btn-xs">Buzz!</button>
+					</div>
+				</form>
+			</div>
+			<div id="user-posts-wrapper">
+				{% for row in user_post: %}
+				<div class="user-post">
+					<div class="user-post-content">{{row[3]}}</div>
+					<div class="user-post-info" pid="{{row[0]}}">
+						<span class="glyphicon glyphicon-remove removePost"></span>
+						<span>{{row[4]}} </span>
+						<span class="user-post-votes">{{row[5]}} </span>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="col-sm-8" id="feed">
+			{% for post in posts: %}
+			<div class="feed-post">
+				<div class="col-sm-9 col-xs-9">
+					<div class="feed-post-voting col-sm-2 col-xs-1" pid="{{post[0]}}">
+						<div class="vote-down"><span class="glyphicon glyphicon-thumbs-down"></span></div>
+						<div class="vote-record"><span>{{post[4]}}</span></div>
+						<div class="vote-up"><span class="glyphicon glyphicon-thumbs-up"></span></div>
+					</div>
+					<div class="feed-post-content col-sm-10 col-xs-11">
+						{{post[3]}} <span> {{post[5]}}</span>
+					</div>
+				</div>
+				<div class="col-sm-3 col-xs-3 feed-post-info">
+					<img class="feed-post-profile" src="static/profile/{{post[2]}}" uid="{{post[6]}}">
+					<div class="feed-post-username"><span class="glyphicon glyphicon-user" uid="{{post[6]}}"></span> {{post[1]}}</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+
+
+</div>
+{% endblock %}

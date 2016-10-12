@@ -1,0 +1,65 @@
+#page-register {
+	padding-top: 20px;
+}
+
+#register-wrapper {
+	width: 450px;
+	margin: auto;
+	background-color: $neon-green;
+	font-family: $soft-font;
+	border-radius: 5px;
+	h3 {
+		padding-left: 15px;
+		margin: 0px;
+		padding: 10px 0px 0px 15px;
+		color: $alf-brown;
+	}
+}
+
+.form {
+	font-size: 14px;
+	padding: 20px 15px;
+	.form-group {
+		width: 90%;
+		.input-area {
+			padding: 2px 0px 5px 0px;
+			input {
+				width: 80%;
+				height: 18px;
+				font-size: 14px;
+			}
+		}
+	}
+
+	.button-wrapper {
+		margin-top: 20px;
+		button {
+			border: none;
+			border-radius: 5px;
+			background-color: $tone-red;
+			color: white;
+			font-size: 14px;
+			padding: 5px 10px;
+		}
+	}
+}
+
+#register-message {
+	width: 400px;
+	margin: 20px auto;
+	padding: 10px 15px;
+	border: 3px solid $message-color;
+	border-radius: 3px;
+	font-family: $message-font;
+	font-size: $message-size;
+	color: $alf-brown;
+}
+
+
+// @include breakpoint(768) {
+// 		width: 95%;
+// 	}
+// 	@include breakpoint(992) {
+// 		width: 70%;
+// 	}
+

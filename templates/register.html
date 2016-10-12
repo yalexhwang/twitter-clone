@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div id="page-register">
+	<div id="register-wrapper">
+		<h3 id="register-title">Join Us For ALF</h3>
+		<form class="form" action="/register_submit" method="POST" id="register" enctype="multipart/form-data">
+			<div class="form-group">
+				<label for="id-username">Username</label>
+				<div class="input-area">
+					<input type="text" id="id-username" name="user_name" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="id-email">E-mail</label>
+				<div class="input-area">
+					<input type="email" id="id-email" name="email" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label>
+				<div class="input-area">
+					<input type="password" id="password" name="password" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="confirm-password">Confirm Password</label>
+				<div class="input-area">
+					<input type="password" id="confirm-password" name="confirm-password" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="id-name">Name</label>
+				<div class="input-area">
+					<input type="text" id="id-name" name="name" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="id-file">Photo</label>
+				<div class="input-area">
+					<input type="file" id="id-file" name="photo" required>
+				</div>
+			</div>
+			<div class="button-wrapper form-group">
+				<button type="submit">Register</button>
+			</div>
+		</form>
+		
+	</div>
+	{% if message: %}
+	<div id="register-message">
+		{{message}}
+	</div>
+	{% endif %}
+</div>
+
+{% endblock %}

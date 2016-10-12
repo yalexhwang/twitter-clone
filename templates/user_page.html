@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<div class="col-sm-4">
+	<div id="user-wrapper">
+		<div id="user-photo">
+			<img src="static/profile/{{user_info[5]}}">
+		</div>
+		<div id="user-info" uid="{{user_info[0]}}">
+			<h3>{{user_info[2]}}<small> {{user_info[1]}}</small></h3>
+			<div class="stat-wrapper"><span id="following_num">{{user_info[4]}}</span> following </div>
+			<div class="stat-wrapper"><span id="followers_num">{{user_info[4]}}</span> followers </div>
+			<div class="stat-wrapper"><span id="votes_num">{{user_info[6]}}</span> Votes </div>
+		</div>
+	</div>
+</div>
+<div class="col-sm-8" id="feed">
+	{% for row in user_post: %}
+	<div class="feed-post">
+		<div class="col-sm-9 col-xs-9">
+			<div class="feed-post-voting col-sm-2 col-xs-1" pid="{{row[0]}}">
+				<div class="vote-down"><span class="glyphicon glyphicon-thumbs-down"></span></div>
+				<div class="vote-record"><span>{{row[5]}}</span></div>
+				<div class="vote-up"><span class="glyphicon glyphicon-thumbs-up"></span></div>
+			</div>
+			<div class="feed-post-content col-sm-10 col-xs-11">
+				{{row[3]}} <span> {{row[4]}}</span>
+			</div>
+		</div
+	</div>
+	{% endfor %}
+</div>
+{% endblock %}
