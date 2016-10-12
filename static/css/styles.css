@@ -474,7 +474,7 @@
 
 /* line 136, ../../compass/sass/views/my_page.scss */
 #followers {
-  background-color: white;
+  background-color: ivory;
   margin-left: 20px;
   flex: 0 432px;
   display: flex;
@@ -484,7 +484,7 @@
 @media (min-width: 480px) {
   /* line 136, ../../compass/sass/views/my_page.scss */
   #followers {
-    flex: 1 90%;
+    flex: 0 90%;
   }
 }
 @media (min-width: 768px) {
@@ -492,6 +492,11 @@
   #followers {
     flex: 0 755px;
   }
+}
+/* line 149, ../../compass/sass/views/my_page.scss */
+#followers .myFollowers {
+  flex: 0 432px;
+  border: 1px solid black;
 }
 
 /* line 28, ../../compass/sass/styles.scss */

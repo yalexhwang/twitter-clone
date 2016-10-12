@@ -134,19 +134,21 @@
 }
 
 #followers {
-	background-color: white;
+	background-color: ivory;
 	margin-left: 20px;
 	flex: 0 432px;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
 	@include breakpoint(480) {
-		flex: 1 90%;
+		flex: 0 90%;
 	}
 	@include breakpoint(768) {
 		flex: 0 755px;
 	}
 	.myFollowers {
-		
+		flex: 0 432px;
+		border: 1px solid black;
+
 	}
 }
