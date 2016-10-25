@@ -2,7 +2,7 @@
 
 A Twitter-like website with responsive layout, developed using Python with Flask, MySQL. 
 
-<link>www.yalexhwang.com/twitter-clone</link>
+<link>www.yalexhwang.com/bbalf</link>
 
 ##Technologies & Frameworks 
 - HTML
