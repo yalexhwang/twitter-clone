@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)http://localhost:8100/?ionicplatform=android#/tab -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    
+    <script>
+      // Injected Ionic Go To URL Live Reload Plugin
+      window.LiveReloadPlugin_IonicGoToUrl = (function() {
+        var GOTO_KEY = "__ionic_goto_url__";
+        var HISTORY_GO_KEY = "__ionic_history_go__";
+        var GoToUrlPlugin = function(window, host) {
+          this.window = window;
+          this.host = host;
+        }
+        GoToUrlPlugin.identifier = "__ionic_goto_url__";
+        GoToUrlPlugin.version = "1.0";
+        GoToUrlPlugin.prototype.reload = function(path) {
+          try {
+            if (path) {
+              if (path.indexOf(GOTO_KEY) === 0) {
+                this.window.document.location = path.replace(GOTO_KEY, "");
+                return true;
+              }
+              if (path.indexOf(HISTORY_GO_KEY) === 0) {
+                this.window.document.history.go( parseInt(path.replace(HISTORY_GO_KEY, ""), 10));
+                return true;
+              }
+            }
+          } catch(e) {
+            console.log(e);
+          }
+          return false;
+        };
+        return GoToUrlPlugin;
+      })();
+    </script>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="http://localhost:8100/manifest.json">
+
+    <link href="./ionic.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="./ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+     <script src="./js"></script>
+    <script src="./ng-cordova.js"></script>
+    <script src="./cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="./app.js"></script>
+    <script src="./controllers.js"></script>
+    <script src="./services.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="./common.js"></script><script type="text/javascript" charset="UTF-8" src="./util.js"></script><script type="text/javascript" charset="UTF-8" src="./stats.js"></script><script type="text/javascript" charset="UTF-8" src="./AuthenticationService(1).Authenticate"></script></head>
+  <body ng-app="starter" class="grade-a platform-browser platform-android platform-ready">
+    <ion-nav-view class="view-container" nav-view-transition="android"></ion-nav-view>
+  
+<script>
+ionic && ionic.Platform && ionic.Platform.setPlatform("android");
+</script>
+
+<script>//<![CDATA[
+document.write('<script src="//' + (location.hostname || 'localhost') + ':35729/livereload.js?snipver=1"><\/script>')
+//]]></script><script src="./livereload.js"></script>
+
+
+</body></html>

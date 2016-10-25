@@ -25,8 +25,8 @@
 			</table>
 		</div>
 	</div>
-	<div id="myPage-tab">
-		<div id="tweets">
+	<div id="mySections">
+		<div class="section-tweets">	
 			{% for post in user_posts: %}
 			<div class="myPost">
 				{{post[3]}}
@@ -37,20 +37,30 @@
 			</div>
 			{% endfor %}
 		</div>
-		<div id="followers">
+		<div class="title">Followers</div>
+		<div class="section">	
 			{% for user in followers: %}
 			<div class="myFollowers" uid="{{user[0]}}">
-				<div class="follower-photo">
-					<img src="../static/profile/{{user[3]}}">
-				</div>
-				<div class="follower-info">
-					<div class="follower-username">
-						{{user[2]}}<span>{{user[1]}}</span>
-					</div>{{user[4]}}
-				</div>
+				<a href="/user_page/{{user[0]}}">
+				<img class="follower-photo" src="../static/profile/{{user[3]}}">
+				<div class="username">
+						{{user[2]}}
+				</div></a>
 			</div>
 			{% endfor %}
+		</div>
 
+		<div class="title">Following</div>
+		<div class="section">	
+			{% for user in followings: %}
+			<div class="myFollowings" uid="{{user[0]}}">
+				<a href="/user_page/{{user[0]}}">
+				<img class="following-photo" src="../static/profile/{{user[3]}}">
+				<div class="username">
+						{{user[2]}}
+				</div></a>
+			</div>
+			{% endfor %}
 		</div>
 	</div>
 

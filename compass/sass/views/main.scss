@@ -75,19 +75,17 @@
 }
 
 .feed-post {
-	// background-image: url('../images/p2.jpg');
-	// background-size: cover;
-	background-color: $alf-blue;
-	// border: 1px solid $tone-red;
+	background-image: url('../images/p2.jpg');
+	background-size: cover;
 	padding: 5px 10px;
 	display: flex;
 	flex: 0 90%;
 	margin: 10px auto;
 	@include breakpoint(768) {
-		flex: 0 90%;
+		flex: 0 80%;
 	}
 	@include breakpoint(992) {
-		flex: 0 45%;
+		flex: 0 70%;
 	}
 
 	.post-user {
@@ -123,6 +121,7 @@
 			color: white;
 			background-color: $tone-red;
 			font-size: 12px;
+			text-align: center;
 		}
 	}
 

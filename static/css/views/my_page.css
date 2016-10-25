@@ -1,17 +1,19 @@
 /*
 Error: Undefined variable: "$alf-blue".
-        on line 2 of /Users/AlexH/Documents/Unit4/twitter-clone/compass/sass/views/my_page.scss
+        on line 4 of /Users/AlexH/Documents/Unit4/twitter-clone/compass/sass/views/my_page.scss
 
 1: #page-myPage {
-2: 	background-color: $alf-blue;
-3: 	min-height: 90vh;
-4: 	height: 100%;
-5: 	padding-bottom: 40px;
-6: 	display: flex;
-7: 	flex-flow: row wrap;
+2: 	min-height: 90vh;
+3: 	height: 100%;
+4: 	background-color: $alf-blue;
+5: 	display: flex;
+6: 	flex-flow: column nowrap;
+7: }
+8: 
+9: #myInfo {
 
 Backtrace:
-/Users/AlexH/Documents/Unit4/twitter-clone/compass/sass/views/my_page.scss:2
+/Users/AlexH/Documents/Unit4/twitter-clone/compass/sass/views/my_page.scss:4
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
@@ -63,4 +65,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$alf-blue\".\A         on line 2 of /Users/AlexH/Documents/Unit4/twitter-clone/compass/sass/views/my_page.scss\A \A 1: #page-myPage {\A 2: 	background-color: $alf-blue;\A 3: 	min-height: 90vh;\A 4: 	height: 100%;\A 5: 	padding-bottom: 40px;\A 6: 	display: flex;\A 7: 	flex-flow: row wrap;"; }
+  content: "Error: Undefined variable: \"$alf-blue\".\A         on line 4 of /Users/AlexH/Documents/Unit4/twitter-clone/compass/sass/views/my_page.scss\A \A 1: #page-myPage {\A 2: 	min-height: 90vh;\A 3: 	height: 100%;\A 4: 	background-color: $alf-blue;\A 5: 	display: flex;\A 6: 	flex-flow: column nowrap;\A 7: }\A 8: \A 9: #myInfo {"; }

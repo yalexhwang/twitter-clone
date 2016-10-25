@@ -159,7 +159,7 @@ def my_page():
 				user_info = data1,
 				user_posts = data2,
 				user_stat = [len(data2), len(data3), len(data4)],
-				following = data3,
+				followings = data3,
 				followers =  data4,
 				user_id = session['user_id'],
 				username = session['username'])
@@ -177,9 +177,32 @@ def user_page(id):
 	cursor.execute(user_post_query)
 	data2 = cursor.fetchall()
 	print data2
+	user_post_query = "SELECT post.id, user.id, user.username, post.post, post.posted_at, post.votes FROM user INNER JOIN post ON user.id = post.user_id WHERE user.id = '%s' ORDER BY post.posted_at DESC" % user_id
+	cursor.execute(user_post_query)
+	data2 = cursor.fetchall()
+	following_query = "SELECT u.id, u.username, u.nickname, u.image, u.total_votes from followers as f INNER JOIN user as u ON f.uid_followed = u.id WHERE uid_following = '%s'" % user_id
+	cursor.execute(following_query)
+	data3 = cursor.fetchall()
+	follower_query = "SELECT u.id, u.username, u.nickname, u.image, u.total_votes from followers as f INNER JOIN user as u ON f.uid_following = u.id WHERE uid_followed = '%s'" % user_id
+	cursor.execute(follower_query)
+	data4 = cursor.fetchall()
+	my_followings = "SELECT u.id from followers as f INNER JOIN user as u ON f.uid_followed = u.id WHERE uid_following = '%s'" % user_id
+	cursor.execute(my_followings)
+	data3 = cursor.fetchall()
+	following = "0"
+	for user in data3:
+		if user == session['user_id']:
+			following = 1
+
 	return render_template('user_page.html',
 			user_info = data1,
-			user_post = data2)
+			posts = data2,
+			user_stat = [len(data2), len(data3), len(data4)],
+			followings = data3,
+			followers =  data4,
+			following = following,
+			user_id = session['user_id'],
+			username = session['username'])
 
 
 # Post - - - - - - - - - - - - - - - - - - - 

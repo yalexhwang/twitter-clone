@@ -1,33 +1,81 @@
 {% extends 'layout.html' %}
 {% block body %}
+<div id="page-myPage">
+	<div id="myInfo">
+		<div id="photo-wrapper">
+			<img src="../static/profile/{{user_info[5]}}">
+		</div>
+		<div id="info-wrapper">
+			<div id="user-name">
+				{{user_info[2]}}<span>{{user_info[1]}}</span>
+				{% if following: %}
+				<img src="../static/images/follow-icon.jpeg" width="14">
+				{% else: %}
+				<img src="../static/images/unfollow-icon.png" width="14">
+				{% endif %}
+			</div>
+			
+			<table id="user-stat">
+				<tr>
+					<td>Tweets</td><td class="td-num">{{user_stat[0]}}</td>
+				</tr>
+				<tr>
+					<td id="showVoted">Votes</td><td class="td-num">{{user_info[6]}}</td>
+				</tr>
+				<tr>
+					<td>Following</td><td class="td-num">{{user_stat[1]}}</td>
+				</tr>
+				<tr>
+					<td>Followers</td><td class="td-num">{{user_stat[2]}}</td>
+				</tr>
+			</table>
 
-<div class="col-sm-4">
-	<div id="user-wrapper">
-		<div id="user-photo">
-			<img src="static/profile/{{user_info[5]}}">
-		</div>
-		<div id="user-info" uid="{{user_info[0]}}">
-			<h3>{{user_info[2]}}<small> {{user_info[1]}}</small></h3>
-			<div class="stat-wrapper"><span id="following_num">{{user_info[4]}}</span> following </div>
-			<div class="stat-wrapper"><span id="followers_num">{{user_info[4]}}</span> followers </div>
-			<div class="stat-wrapper"><span id="votes_num">{{user_info[6]}}</span> Votes </div>
 		</div>
 	</div>
-</div>
-<div class="col-sm-8" id="feed">
-	{% for row in user_post: %}
-	<div class="feed-post">
-		<div class="col-sm-9 col-xs-9">
-			<div class="feed-post-voting col-sm-2 col-xs-1" pid="{{row[0]}}">
-				<div class="vote-down"><span class="glyphicon glyphicon-thumbs-down"></span></div>
-				<div class="vote-record"><span>{{row[5]}}</span></div>
-				<div class="vote-up"><span class="glyphicon glyphicon-thumbs-up"></span></div>
+	<div id="mySections">
+		<div class="section-tweets">	
+			{% for post in posts: %}
+			<div class="feed-post">
+				<div class="post-post">
+					<div class="post-content">
+						<div class="text">{{post[3]}}<div class="timestamp">{{post[4]}}</div></div>
+					</div>
+					<div class="post-voting">
+						<div class="board" pid="{{post[0]}}" uid="{{post[1]}}">
+							<span class="vote-up">Yay</span>
+							<span class="count">{{post[5]}}</span>
+							<span class="vote-down">Nah</span>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="feed-post-content col-sm-10 col-xs-11">
-				{{row[3]}} <span> {{row[4]}}</span>
+			{% endfor %}
+		</div>
+		<div class="title">Followers</div>
+		<div class="section">	
+			{% for user in followers: %}
+			<div class="myFollowers" uid="{{user[0]}}">
+				<img class="follower-photo" src="../static/profile/{{user[3]}}">
+				<div class="username">
+						{{user[2]}}
+				</div>
 			</div>
-		</div
+			{% endfor %}
+		</div>
+
+		<div class="title">Following</div>
+		<div class="section">	
+			{% for user in followings: %}
+			<div class="myFollowings" uid="{{user[0]}}">
+				<img class="following-photo" src="../static/profile/{{user[3]}}">
+				<div class="username">
+						{{user[2]}}
+				</div>
+			</div>
+			{% endfor %}
+		</div>
 	</div>
-	{% endfor %}
+
 </div>
+
 {% endblock %}
