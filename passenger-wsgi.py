@@ -4,5 +4,5 @@ if sys.executable != INTERP:
         os.execl(INTERP, INTERP, *sys.argv)
         sys.path.append(os.getcwd())
 
-sys.path.append('mini_city')
+sys.path.append('twitter_clone')
 from home import app as application                                      
