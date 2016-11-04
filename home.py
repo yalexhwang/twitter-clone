@@ -5,10 +5,10 @@ import bcrypt
 
 mysql = MySQL()
 app = Flask(__name__)
-app.config['MYSQL_DATABASE_USER'] = 'x'
+app.config['MYSQL_DATABASE_USER'] = 'twitter-clone'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'x'
-app.config['MYSQL_DATABASE_DB'] = 'bawk'
-app.config['MYSQL_DATABASE_HOST'] = '127.0.0.1'
+app.config['MYSQL_DATABASE_DB'] = 'twitter_clone'
+app.config['MYSQL_DATABASE_HOST'] = '52.11.185.92'
 mysql.init_app(app)
 
 conn = mysql.connect()
