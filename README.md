@@ -2,20 +2,15 @@
 
 A Twitter-like website with responsive layout, developed using Python with Flask, MySQL. 
 
-<link>www.yalexhwang.com/bbalf</link>
-
-##Technologies & Frameworks 
+## Technologies & Frameworks 
 - HTML
-- CSS/SASS
-  - Compass
+- CSS, SASS, Compass
 - Jinja2
 - MySQL
 
-##Functionalities
+## Functionalities
 - Create an account, sign in/out
-- My Page 
-- Main Page (tweet-stream) 
-- Voting options (up or down) on tweets
+- Access my tweets and account information on My Page
+- Access an updating stream of latest tweets on landing page 
+- Vote up or down on a tweet on the stream
 
-##What I learned
-- **enctype** To save a user's profile photo, on a POST request, I changed the encoding type from the default `application/x-www-form-urlencoded` to `multipart/form-data`. 
